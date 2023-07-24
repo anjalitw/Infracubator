@@ -1,0 +1,15 @@
+FROM golang:latest AS build_goapp
+
+WORKDIR /app
+
+COPY . .
+
+RUN make build
+
+FROM golang:latest
+
+COPY --from=build_goapp /app/out/go-app /app/go-app
+
+EXPOSE 8080
+
+CMD ["/app/go-app"]
