@@ -63,3 +63,11 @@ https://github.com/anjalitw/Infracubator/blob/main/go-app/Dockerfile.multistage
 
 **Assignment 5:**
 
+    docker run --name redisContainer -d redis 
+    docker inspect redisContainer
+    docker build -t goAppNewImage .
+    docker run -e REDIS_HOST=172.17.0.1 --name goappcontainer -d goapp
+
+**Assignment 6:**
+
+      
