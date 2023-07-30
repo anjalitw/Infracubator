@@ -77,4 +77,5 @@ https://github.com/anjalitw/Infracubator/blob/main/go-app/Dockerfile.multistage
 
 **Assignment 7:**
 
+  https://github.com/anjalitw/Infracubator/blob/main/go-app/docker-compose.yml
       
