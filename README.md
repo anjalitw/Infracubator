@@ -48,3 +48,18 @@ Infracubator Assignments
       stage 1: build
       stage 2: Run
 https://github.com/anjalitw/Infracubator/blob/main/go-app/Dockerfile.multistage
+
+**Assignment 4:**
+
+    docker volume create my_volume  
+    docker run -it -v my_volume:/volumeFolder --name my-container-01 ubuntu
+    cd volumeFolder/
+    echo "Hello" > hello.txt
+    exit
+    docker run -it -v my_volume:/volumeFolder --name my-container-02 ubuntu
+    cd volumeFolder/
+    ls -lrt
+    exit
+
+**Assignment 5:**
+
