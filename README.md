@@ -65,9 +65,16 @@ https://github.com/anjalitw/Infracubator/blob/main/go-app/Dockerfile.multistage
 
     docker run --name redisContainer -d redis 
     docker inspect redisContainer
-    docker build -t goAppNewImage .
-    docker run -e REDIS_HOST=172.17.0.1 --name goappcontainer -d goapp
+    docker build -t goappnewimage .
+    docker run -e REDIS_HOST=172.17.0.1 --name goappcontainer -d goappnewimage
 
 **Assignment 6:**
+
+    docker network create --driver bridge my_network
+    docker run -it --network=my_network -d redis
+    docker run -e REDIS_HOST=goappcontainer -d goappnewimage
+
+
+**Assignment 7:**
 
       
